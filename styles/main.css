@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: red;
+}
+
+.column {
+  background: blue;
+  width: 45%;
+  height: 50vh;
+  padding: .5em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  width: 50%;
+  display: block;
+  margin: 4em auto;
+}
+
+#col-1 h1:hover {
+  cursor: pointer;
+}
