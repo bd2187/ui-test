@@ -2,16 +2,21 @@
   box-sizing: border-box;
 }
 
+#col-1 {
+  color: #000;
+}
+
 section {
   height: 100vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  min-height: 753px;
   background: red;
 }
 
 .column {
-  background: blue;
   width: 45%;
   height: 50vh;
   padding: .5em;
@@ -19,12 +24,15 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  min-height: 365px;
 }
 
 button {
   width: 50%;
   display: block;
   margin: 4em auto;
+  padding: 1em;
 }
 
 #col-1 h1:hover,
