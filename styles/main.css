@@ -27,6 +27,7 @@ button {
   margin: 4em auto;
 }
 
-#col-1 h1:hover {
+#col-1 h1:hover,
+button:hover {
   cursor: pointer;
 }
