@@ -15,5 +15,5 @@
 <h2>Users Can:</h2>
 <ul>
   <li>Click a color to change the color of the text</li>
-  <li>Click the counter button up to 5 and reset the counter button</li>
+  <li>Click the counter button up to 5 and read "Success!"</li>
 </ul>

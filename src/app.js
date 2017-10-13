@@ -1,30 +1,32 @@
 var buttonModule = function() {
   // Select button elements
   var counterButton = document.querySelector('.counter');
-  var resetButton = document.querySelector('.reset');
 
   function counterEvent() {
     return counterButton.addEventListener('click', () => {
       // Add one to counter button's number
       counterButton.textContent++;
 
-      // if button's text content is 5, disable counter button
+      /*
+        If button's text content is 5, set counter button's
+        display to none and display "Success!".
+      */
       if (counterButton.textContent == 5) {
-        counterButton.disabled = true;
+        var columnTwo = document.querySelector('#col-2');
+
+        var para = document.createElement('p');
+        var textNode = document.createTextNode('Success!');
+        para.appendChild(textNode);
+        para.className = 'success';
+
+        counterButton.style.display = 'none';
+
+        columnTwo.appendChild(para);
       }
     });
   }
 
-  function resetEvent() {
-    // reset counter button
-    return resetButton.addEventListener('click', () => {
-      counterButton.textContent = 0;
-      counterButton.disabled = false;
-    });
-  }
-
   return {
-    resetEvent,
     counterEvent
   };
 };
@@ -63,8 +65,7 @@ const buttons = buttonModule();
 const colors = colorModule();
 
 const { colorEvent } = colors;
-const { resetEvent, counterEvent } = buttons;
+const { counterEvent } = buttons;
 
 counterEvent();
-resetEvent();
 colorEvent();
