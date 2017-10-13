@@ -1,19 +1,26 @@
 * {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 #col-1 {
   color: #000;
 }
 
+.column,
 section {
-  height: 100vh;
   display: flex;
+}
+
+section {
+  margin: 0 auto;
+  height: 100vh;
+
   justify-content: space-around;
   align-items: center;
 
-  min-height: 753px;
-  background: red;
+  min-height: 47.0625em; /* 753px / 16em */
+  max-width: 54.375em; /*870px / 16em*/
 }
 
 .column {
@@ -21,7 +28,6 @@ section {
   height: 50vh;
   padding: .5em;
 
-  display: flex;
   flex-direction: column;
   align-items: center;
 
@@ -30,9 +36,21 @@ section {
 
 button {
   width: 50%;
+  max-width: 6.875em; /*110px / 16em*/
   display: block;
   margin: 4em auto;
   padding: 1em;
+
+  background-color: #41ba54;
+  border: 1px solid #000;
+  color: #fff;
+
+  transition: all .5s;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #41ba54;
 }
 
 #col-1 h1:hover,
