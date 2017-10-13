@@ -12,16 +12,14 @@ var buttonModule = function() {
         display to none and display "Success!".
       */
       if (counterButton.textContent == 5) {
+        var successEl = document.querySelector('.success');
         var columnTwo = document.querySelector('#col-2');
-
         var para = document.createElement('p');
         var textNode = document.createTextNode('Success!');
+
         para.appendChild(textNode);
-        para.className = 'success';
-
         counterButton.style.display = 'none';
-
-        columnTwo.appendChild(para);
+        successEl.appendChild(para);
       }
     });
   }
